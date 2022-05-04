@@ -14,12 +14,12 @@ const main = async () => {
     const vault = new ethers.Contract(vaultAddr, vaultABI, signer)
 
     const filter = {
-        // address: vaultAddr,
-        address: [
-            "0x1968dd1ab79c7c73FAc8578FED92DE959d71A65f", // BTC
-            "0x7065FdCcE753f4fCEeEcFe25F2B7c51d52cf056e", // ETH
-            "0x1c3b1069E60F9e3CE8212410b734a7C6775D865C" // sAVAX
-        ],
+        address: vaultAddr,
+        // address: [
+        //     "0x1968dd1ab79c7c73FAc8578FED92DE959d71A65f", // BTC
+        //     "0x7065FdCcE753f4fCEeEcFe25F2B7c51d52cf056e", // ETH
+        //     "0x1c3b1069E60F9e3CE8212410b734a7C6775D865C" // sAVAX
+        // ],
         topics: [vault.interface.getEventTopic("Withdraw")]
     }
     provider.on(filter, async (log) => {
