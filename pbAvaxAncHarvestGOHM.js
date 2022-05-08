@@ -4,7 +4,7 @@ const IERC20ABI = require("./IERC20ABI.json")
 const vaultABI = require("./vaultABI.json")
 require("dotenv").config()
 
-const vaultAddr = "0x7065FdCcE753f4fCEeEcFe25F2B7c51d52cf056e"
+const vaultAddr = "0x9838e8E72B4225a9966Ea78A47F297Aa9d7973B0"
 const threshold = "100" // i.e. 50 = 50 UST
 
 const aUSTAddr = "0xaB9A04808167C170A9EC4f8a87a0cD781ebcd55e"
